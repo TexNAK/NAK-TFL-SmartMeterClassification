@@ -1,0 +1,536 @@
+[
+  {
+    "author": [
+      {
+        "family": "Benninger",
+        "given": "Moritz"
+      },
+      {
+        "family": "Hofmann",
+        "given": "Martina"
+      },
+      {
+        "family": "Liebschner",
+        "given": "Marcus"
+      }
+    ],
+    "container-title": "Procedia Computer Science",
+    "id": "applianceStateMonitoringMLCoffeeRefrigerator",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "page": "148-155",
+    "publisher": "Elsevier",
+    "title": "Transferable and self-learning online monitoring system for electrical household appliances",
+    "type": "article-journal",
+    "volume": "176",
+    "URL": "https://scholar.google.com/scholar?q=allintitle:+Transferable+and+self-learning+Online+Monitoring+System+for+electrical+household+appliances&hl=en&as_sdt=0,31"
+  },
+  {
+    "author": [
+      {
+        "family": "Elvitigala",
+        "given": "Don Samitha"
+      },
+      {
+        "family": "Peiris",
+        "given": "Roshan"
+      },
+      {
+        "family": "Wilhelm",
+        "given": "Erik"
+      },
+      {
+        "family": "Foong",
+        "given": "Shaohui"
+      },
+      {
+        "family": "Nanayakkara",
+        "given": "Suranga"
+      }
+    ],
+    "container-title": "Proceedings of the 8th augmented human international conference",
+    "id": "monitoringGlove",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "page": "1-4",
+    "title": "GrabAmps: Grab a wire to sense the current flow",
+    "title-short": "GrabAmps",
+    "type": "paper-conference",
+    "URL": "http://www.ahlab.org/sites/default/files/GrabAmps-AH2017CameraCopy%20version2.pdf"
+  },
+  {
+    "author": [
+      {
+        "family": "Belley",
+        "given": "Corinne"
+      },
+      {
+        "family": "Gaboury",
+        "given": "Sebastien"
+      },
+      {
+        "family": "Bouchard",
+        "given": "Bruno"
+      },
+      {
+        "family": "Bouzouane",
+        "given": "Abdenour"
+      }
+    ],
+    "container-title": "Pervasive and Mobile Computing",
+    "id": "inexpensiveClassification",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "page": "58-78",
+    "publisher": "Elsevier",
+    "title": "An efficient and inexpensive method for activity recognition within a smart home based on load signatures of appliances",
+    "type": "article-journal",
+    "volume": "12",
+    "URL": "https://constellation.uqac.ca/2502/4/Version_journal_(article_révisé)-Version_impersonnelle.pdf"
+  },
+  {
+    "DOI": "10.1109/itnec.2017.8284875",
+    "URL": "https://doi.org/10.1109%2Fitnec.2017.8284875",
+    "author": [
+      {
+        "family": "Zheng",
+        "given": "Peixiang"
+      },
+      {
+        "family": "Chen",
+        "given": "Bin"
+      },
+      {
+        "family": "Lu",
+        "given": "Xin"
+      },
+      {
+        "family": "Zhou",
+        "given": "Xinyan"
+      }
+    ],
+    "container-title": "2017 IEEE 2nd Information Technology, Networking, Electronic and Automation Control Conference (ITNEC)",
+    "id": "privacyTradeoff",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          12
+        ]
+      ]
+    },
+    "publisher": "IEEE",
+    "title": "Privacy-utility trade-off for smart meter data considering tracing household power usage",
+    "type": "paper-conference"
+  },
+  {
+    "ISBN": "978-3-642-23878-9",
+    "abstract": "This paper investigates how to classify household items such as televisions, kettles and refrigerators based only on their electricity usage profile every 15 minutes over a fixed interval of time. We address this time series classification problem through deriving a set of features that characterise the pattern of usage and the amount of power used when a device is on. We evaluate a wide range of classifiers on both the raw data and the derived feature set using both a daily and weekly usage profile and demonstrate that whilst some devices can be identified with a high degree of accuracy, others are very hard to disambiguate with this granularity of data.",
+    "author": [
+      {
+        "family": "Lines",
+        "given": "Jason"
+      },
+      {
+        "family": "Bagnall",
+        "given": "Anthony"
+      },
+      {
+        "family": "Caiger-Smith",
+        "given": "Patrick"
+      },
+      {
+        "family": "Anderson",
+        "given": "Simon"
+      }
+    ],
+    "container-title": "Intelligent data engineering and automated learning - ideal 2011",
+    "editor": [
+      {
+        "family": "Yin",
+        "given": "Hujun"
+      },
+      {
+        "family": "Wang",
+        "given": "Wenjia"
+      },
+      {
+        "family": "Rayward-Smith",
+        "given": "Victor"
+      }
+    ],
+    "id": "listOfDevices1",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "page": "403-412",
+    "publisher": "Springer Berlin Heidelberg",
+    "publisher-place": "Berlin, Heidelberg",
+    "title": "Classification of household devices by electricity usage profiles",
+    "type": "paper-conference",
+    "URL": "https://link.springer.com/chapter/10.1007/978-3-642-23878-9_48"
+  },
+  {
+    "DOI": "10.1109/ie.2014.18",
+    "URL": "https://doi.org/10.1109%2Fie.2014.18",
+    "author": [
+      {
+        "family": "Liao",
+        "given": "Jing"
+      },
+      {
+        "family": "Stankovic",
+        "given": "Lina"
+      },
+      {
+        "family": "Stankovic",
+        "given": "Vladimir"
+      }
+    ],
+    "container-title": "2014 International Conference on Intelligent Environments",
+    "id": "combinedAnalysis",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          6
+        ]
+      ]
+    },
+    "publisher": "IEEE",
+    "title": "Detecting Household Activity Patterns from Smart Meter Data",
+    "type": "paper-conference"
+  },
+  {
+    "author": [
+      {
+        "family": "Yassine",
+        "given": "Abdulsalam"
+      },
+      {
+        "family": "Singh",
+        "given": "Shailendra"
+      },
+      {
+        "family": "Alamri",
+        "given": "Atif"
+      }
+    ],
+    "container-title": "IEEE Access",
+    "id": "healthCareUse",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "page": "13131-13141",
+    "publisher": "IEEE",
+    "title": "Mining human activity patterns from smart home big data for health care applications",
+    "type": "article-journal",
+    "volume": "5"
+  },
+  {
+    "DOI": "10.1016/j.enbuild.2007.07.005",
+    "URL": "https://doi.org/10.1016%2Fj.enbuild.2007.07.005",
+    "author": [
+      {
+        "family": "Firth",
+        "given": "S."
+      },
+      {
+        "family": "Lomas",
+        "given": "K."
+      },
+      {
+        "family": "Wright",
+        "given": "A."
+      },
+      {
+        "family": "Wall",
+        "given": "R."
+      }
+    ],
+    "container-title": "Energy and Buildings",
+    "id": "trendsInApplianceUse",
+    "issue": "5",
+    "issued": {
+      "date-parts": [
+        [
+          2008,
+          1
+        ]
+      ]
+    },
+    "page": "926-936",
+    "publisher": "Elsevier BV",
+    "title": "Identifying trends in the use of domestic appliances from household electricity consumption measurements",
+    "type": "article-journal",
+    "volume": "40"
+  },
+  {
+    "DOI": "10.1145/1791314.1791318",
+    "ISBN": "9781450300421",
+    "URL": "https://doi.org/10.1145/1791314.1791318",
+    "abstract": "Energy consumption is largely studied in the context of different environments, such as domestic, corporate, industrial, and public sectors. In this paper, we discuss two environments, households and office spaces, where people have an especially strong impact on energy demand and usage. We describe an energy monitoring system which supports continuous and tailored energy feedback, and assess the level of information (energy awareness) that can be gained from time-series energy profiles. Our studies pointed to similarities between households and office spaces and motivated us to profile energy in the same way for both settings. As result, an individualized energy metric is introduced which assists (a) public sharing of energy use, (b) aggregation and combination of energy use across different environments, and (c) comparison among individuals.",
+    "author": [
+      {
+        "family": "Taherian",
+        "given": "Salman"
+      },
+      {
+        "family": "Pias",
+        "given": "Marcelo"
+      },
+      {
+        "family": "Coulouris",
+        "given": "George"
+      },
+      {
+        "family": "Crowcroft",
+        "given": "Jon"
+      }
+    ],
+    "collection-title": "E-energy ’10",
+    "container-title": "Proceedings of the 1st international conference on energy-efficient computing and networking",
+    "id": "householdOfficeSimilar",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "page": "21-30",
+    "publisher": "Association for Computing Machinery",
+    "publisher-place": "New York, NY, USA",
+    "title": "Profiling energy use in households and office spaces",
+    "type": "paper-conference"
+  },
+  {
+    "DOI": "10.1109/mprv.2010.72",
+    "URL": "https://doi.org/10.1109%2Fmprv.2010.72",
+    "author": [
+      {
+        "family": "Marchiori",
+        "given": "Alan"
+      },
+      {
+        "family": "Hakkarinen",
+        "given": "Douglas"
+      },
+      {
+        "family": "Han",
+        "given": "Qi"
+      },
+      {
+        "family": "Earle",
+        "given": "Lieko"
+      }
+    ],
+    "container-title": "IEEE Pervasive Computing",
+    "id": "circuitLevelMonitoring",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          1
+        ]
+      ]
+    },
+    "page": "40-48",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "title": "Circuit-Level Load Monitoring for Household Energy Management",
+    "type": "article-journal",
+    "volume": "10"
+  },
+  {
+    "DOI": "10.1186/s13634-020-0664-y",
+    "URL": "https://doi.org/10.1186%2Fs13634-020-0664-y",
+    "author": [
+      {
+        "family": "Schirmer",
+        "given": "Pascal Alexander"
+      },
+      {
+        "family": "Mporas",
+        "given": "Iosif"
+      },
+      {
+        "family": "Sheikh-Akbari",
+        "given": "Akbar"
+      }
+    ],
+    "container-title": "EURASIP Journal on Advances in Signal Processing",
+    "id": "slidingTimeWindow1",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          2
+        ]
+      ]
+    },
+    "publisher": "Springer Science and Business Media LLC",
+    "title": "Robust energy disaggregation using appliance-specific temporal contextual information",
+    "type": "article-journal",
+    "volume": "2020"
+  },
+  {
+    "DOI": "10.3390/en7117041",
+    "URL": "https://doi.org/10.3390%2Fen7117041",
+    "author": [
+      {
+        "family": "Meehan",
+        "given": "Paula"
+      },
+      {
+        "family": "McArdle",
+        "given": "Conor"
+      },
+      {
+        "family": "Daniels",
+        "given": "Stephen"
+      }
+    ],
+    "container-title": "Energies",
+    "id": "slidingTimeWindow2",
+    "issue": "11",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          10
+        ]
+      ]
+    },
+    "page": "7041-7066",
+    "publisher": "MDPI AG",
+    "title": "An Efficient, Scalable Time-Frequency Method for Tracking Energy Usage of Domestic Appliances Using a Two-Step Classification Algorithm",
+    "type": "article-journal",
+    "volume": "7"
+  },
+  {
+    "DOI": "10.1007/s12053-017-9561-0",
+    "URL": "https://doi.org/10.1007%2Fs12053-017-9561-0",
+    "author": [
+      {
+        "family": "Yang",
+        "given": "Chuan Choong"
+      },
+      {
+        "family": "Soh",
+        "given": "Chit Siang"
+      },
+      {
+        "family": "Yap",
+        "given": "Vooi Voon"
+      }
+    ],
+    "container-title": "Energy Efficiency",
+    "id": "moreNumbers",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          8
+        ]
+      ]
+    },
+    "page": "239-259",
+    "publisher": "Springer Science and Business Media LLC",
+    "title": "A systematic approach in appliance disaggregation using k-nearest neighbours and naive Bayes classifiers for energy efficiency",
+    "type": "article-journal",
+    "volume": "11"
+  },
+  {
+    "DOI": "10.1016/j.aei.2014.09.004",
+    "URL": "https://doi.org/10.1016%2Fj.aei.2014.09.004",
+    "author": [
+      {
+        "family": "Jazizadeh",
+        "given": "Farrokh"
+      },
+      {
+        "family": "Becerik-Gerber",
+        "given": "Burcin"
+      },
+      {
+        "family": "Berges",
+        "given": "Mario"
+      },
+      {
+        "family": "Soibelman",
+        "given": "Lucio"
+      }
+    ],
+    "container-title": "Advanced Engineering Informatics",
+    "id": "unsupervisedClustering",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          10
+        ]
+      ]
+    },
+    "page": "311-326",
+    "publisher": "Elsevier BV",
+    "title": "An unsupervised hierarchical clustering based heuristic algorithm for facilitated training of electricity consumption disaggregation systems",
+    "type": "article-journal",
+    "volume": "28"
+  },
+  {
+    "DOI": "10.1016/j.egypro.2017.12.626",
+    "URL": "https://doi.org/10.1016%2Fj.egypro.2017.12.626",
+    "author": [
+      {
+        "family": "Azaza",
+        "given": "Maher"
+      },
+      {
+        "family": "Wallin",
+        "given": "Fredrik"
+      }
+    ],
+    "container-title": "Energy Procedia",
+    "id": "algoComparison",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          12
+        ]
+      ]
+    },
+    "page": "2250-2256",
+    "publisher": "Elsevier BV",
+    "title": "Evaluation of classification methodologies and Features selection from smart meter data",
+    "type": "article-journal",
+    "volume": "142"
+  }
+]

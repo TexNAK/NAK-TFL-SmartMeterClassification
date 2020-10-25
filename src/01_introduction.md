@@ -1,51 +1,53 @@
 ---
-    header-title: Transferleistung 1
-    title: Optimierung der Build-Dauer eines Web Application Bundler durch Anpassung der Konfiguration und dessen Auswirkung auf den Entwicklungsprozess
+    header-title: Transfer paper 5
+    title: What electricity usage can tell about private households
 
-    author: Max Mustermann
-    Zenturie: A22f
+    author: Til Blechschmidt
+    Zenturie: A17a
     Studiengang: Angewandte Informatik
-    Matrikelnummer: 1337
-
-    keywords: [keyword1, keyword2]
+    Matrikelnummer: 8240
     
     # This can be replaced with any valid bibliography file (.yaml, .json, .bib)
-    bibliography: src/bibliography.yaml
+    bibliography: src/bibliography.json
+
+    lof: true
 ---
 
-# Possent ventis hanc delubra (+CPU)
+# Introduction
 
-## Colophonius curvum stetit sospes
+- Term: non-intrusive appliance load monitoring (NIALM)
 
-Lorem markdownum Hiems elaborque totum porrigit. Pereuntem tamen Cereris
-**habenas** sum captus quoque, videt, actum auras atria, memorantur arborea
-offer postquam Lichan; inmensos.
-
-1. Crede crudelis rescindere rapit collabitur capillis inpar
-2. Cum fuerit eheu Scyrumve
-3. Lycaon flammiferis subit
-4. Urbem cadme servitii tibi leve vestem pendentia
-5. Postquam fronti alios mentis despondet ingenti Mater
-
-## Quae cuncta {#sec:section1}
-
-Voces ales credita. Cum misit terram est votaque quis dederat sumit, profecturas
-criminis totque sex querenti. Iudice est illis *et* vires et Insula, mactandus,
-credulitate iudicium ita. Ganz interessant ist dabei +@tbl:id
-
-| Tables        |      Are      |  Cool |
-|---------------|:-------------:|------:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
-
-Table: Beispiel Tabelle {#tbl:id}
-
-Saxa resoluta quid nupta, tremulis ore infelix
-[ipse](http://urbes-caede.org/siccaveratadversum) deque caelitibus confessa
-amnis at tamque, **procul siquidem** in artis! Poma partes sponte, nam lux
-discedit gravi aequore nunc[@src:source1]. Diese Information findet man in @fig:example.
-
-![Beispiel Abbildung](src/images/example.jpeg){#fig:example}
+- Electricity is being used everyday, everywhere by everyone
+  - Technology is omnipresent
+- Usage of appliances can tell a lot about a person
+  - Daily routine
+    - Sleep schedule
+    - Hygiene(e.g. showering)
+    - Cooking
+    - Work schedule
+    - Entertainment usage (TV, PC)
+  - Diet (e.g. Toaster or Freezer or Stove)
+  - Religion (e.g. through religious holidays)
+  - Pregnancy? (unlikely but might be)
+- Privacy
+  - Advent of the Internet
+    - Big data
+    - Personal profiles
+    - Social Networks
+    - Targeted Advertising
+    - Manipulation (e.g. election — cambridge analytica)
+  - Most appliances use power
+    1. Identification of appliances with unique power profiles
+    2. Monitoring of appliance usage
+    3. Derivation of personal information like routine
+    4. Manipulation (e.g. social engineering) or abuse (e.g. stealing laptop) of this data
+    5. Harm to companies through employees
+- Research
+  - Questions
+    - Which appliances provide a characteristic and isolatable power profile?
+    - What personal information can be derived from data collected by todays household power meters?
+  - Methods
+    - Research of existing papers
+    - Collection of household sample data and manual, argumentative black-box interpretation with experimental verification
 
 \pagebreak

@@ -2,8 +2,8 @@
 \pagenumbering{roman}
 \setcounter{page}{4}
 
-\section*{Literaturverzeichnis}
-\addcontentsline{toc}{section}{Literaturverzeichnis}
+\section*{Literature}
+\addcontentsline{toc}{section}{Literature}
 
 <div id="refs"></div>
 
@@ -13,6 +13,6 @@
 \addcontentsline{toc}{section}{Appendix}
 \renewcommand{\thesubsection}{\Alph{subsection}}
 
-## Abbildungen
+## Figures
 
 Hier gehören Abbildungen hin, die nicht in den Hauptteil passen!
