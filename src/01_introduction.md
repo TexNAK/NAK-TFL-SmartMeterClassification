@@ -6,7 +6,7 @@
     Zenturie: A17a
     Studiengang: Angewandte Informatik
     Matrikelnummer: 8240
-    
+
     # This can be replaced with any valid bibliography file (.yaml, .json, .bib)
     bibliography: src/bibliography.json
 
@@ -15,16 +15,15 @@
 
 # Introduction
 
-- Term: non-intrusive appliance load monitoring (NIALM)
+- Term: non-intrusive appliance load monitoring (NIALM) [@inexpensiveClassification]
 
 - Electricity is being used everyday, everywhere by everyone
   - Technology is omnipresent
 - Usage of appliances can tell a lot about a person
   - Daily routine
-    - Sleep schedule
-    - Hygiene(e.g. showering)
+    - Schedules (sleep, work, meal)
+    - Hygiene (e.g. showering)
     - Cooking
-    - Work schedule
     - Entertainment usage (TV, PC)
   - Diet (e.g. Toaster or Freezer or Stove)
   - Religion (e.g. through religious holidays)

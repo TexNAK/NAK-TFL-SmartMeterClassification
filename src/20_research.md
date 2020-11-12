@@ -1,142 +1,90 @@
 # Existing research
 
+- How to measure electricity
+  - Household layout (three phases)
+  - Measuring equipment
+    - Intrusive load monitoring (in-circuit) e.g. household energy meters
+    - Non-intrusive load meters e.g. clamp on or gloves [@monitoringGlove]
+      - Allows three phase monitoring, accurate to .2A
+      - Allows to monitor building power consumption by access to electricity room (shared in case of apartments) or potentially sewers
+  - Sampling
+    - Circuit level vs. house level [@circuitLevelMonitoring]
+      - Former has advantages like less overshadowing of small devices and potentially room-based classification
+    - Device specific features that can improve results by 20-30% [@algoComparison]
+      - Transient state signatures (high sampling freq. req.)
+      - Steady state signatures
+        - Harmonics (FFT on current)
+        - Voltage-Current trajectory (2D map)
+        - Waveform distortion
+        - Active vs. reactive power variation can improve results [@algoComparison] [@inexpensiveClassification]
+      - Appliance types
+        - Binary
+        - Multistate
+        - "Infinite" states
 
-### [@applianceStateMonitoringMLCoffeeRefrigerator]
-- Single-Phase appliances state identified by ML algorithm
-- Coffee machine making coffee
-- Refrigerator running compressor
+- How to identify appliance type and state
+  - Generally discerning devices and device states through current [@applianceStateMonitoringMLCoffeeRefrigerator]
+    - Single-Phase appliances state identified by ML algorithm
+    - Coffee machine making coffee
+    - Refrigerator running compressor
+  - Use temporal contextual information
+    - Harmonics and temporal patterns play a large role [@slidingTimeWindow2] [@circuitLevelMonitoring]
+      - Ref Kettle vs. Refrigerator harmonics and power factor ![image](https://www.mdpi.com/energies/energies-07-07041/article_deploy/html/images/energies-07-07041f6-1024.png)
+    - +10% recognition [@slidingTimeWindow1]
+      - Especially useful for devices that exhibit power spikes and specific patterns
+        - Refrigerator / AC
+        - Entertainment electronics
+    - Two stage approach, identify by using their state transitions instead of current state [@slidingTimeWindow2]
+      - Categorise based on harmonics & power factor (linear nonreactive, linear reactive, nonlinear reactive)
+      - Identify individual appliances in categories
+      - Implementation: Naive Bayes classifier => ~87% accuracy
 
-Shows that it is possible to determine individual appliance states in an isolated environment
+- Results
+  - 97% scenarios, 98.3% on/off events [@inexpensiveClassification]
+    - Stove burners
+    - Electric kettle (verified by [@listOfDevices1])
+    - Oven
+    - Toaster
+    - Range hood fan (stove fan thingy)
+    - Coffee maker
+    - Microwave
+    - Hair dryer (two modes)
+    - Blender
+    - Mixer
+    - Stereo
+    - Refrigerator (verified by [@listOfDevices1])
+    - Undetectable/-discernable
+      - Lights
+      - PC
+      - TV (recognized by [@listOfDevices1])
+      - Didn't use power factor or harmonics
+      - Some devices are hard to discern without detailed knowledge [@listOfDevices1]
+  - ~87% accuracy (bayes + temporal two stage) [@slidingTimeWindow2]
+  - ~77% accuracy (kNN + bayes) [@moreNumbers]
 
-### [@monitoringGlove]
-- Glove that allows current sensing in three-phase wires
-- Low-tech, unintrusive way to monitor
+- Using the data
+  - Combining it with external data can yield further insights [@combinedAnalysis]
+  - What can be read from it?
+    - Discovering large scale trends [@trendsInApplianceUse]
+      - 5min sampling, 72 dwellings, 5 sites, 2 years
+      - Identified trends in appliance use
+        - Increase in standby appliances
+        - Appliance category increase (low, high but few medium)
+      - Understanding domestic energy usage
+    - Habits tracking [@healthCareUse]
+      - Managed to identify habits and routines (e.g. using computer while doing laundry)
+      - Health/Elderly care use
+        - Discovering routines allows recognition of anomalous activities
+        - May indicate people not being able to care for themselves anymore
+  - Transferring results to offices [@householdOfficeSimilar]
+  - Smart meter data is sensitive [@privacyTradeoff]
+    - Legitimate interest: Could be used for real-time billing based on e.g. grid-load
+    - When sharing it, it is a tradeoff between privacy and data usability
+    - Some algorithms exist which may be able to obfuscate data but keep it usable
 
-Allows to monitor building power consumption by access to electricity room (shared in case of apartments) or potentially sewers
-
-### [@inexpensiveClassification]
-- Smart meters that detect stuff are expensive
-- Demand for appliance classification is rising
-- Reasons to do it
-	- Energy savings
-	- Cost reductions
-	- Activity recognition of reduced-autonomy residents
-		- Deviations may be detected triggering an alert
-- Lab conditions, non-intrusive meter, reproduced scenarios
-- Definitions
-	- Load signature
-	- NIALM
-- 1 Hz sampling
-- Undetectable/Indistinguishable load signatures
-	- TV, Lights, PC
-	- Monitoring harmonics and thus power factor might help
-- Detectable items (97% scenarios, 98.3% on/off events)
-	- Stove burners
-	- Electric kettle
-	- Oven
-	- Toaster
-	- Range hood fan (stove fan thingy)
-	- Coffee maker
-	- Microwave
-	- Hair dryer (two modes)
-	- Blender
-	- Mixer
-	- Stereo
-	- Refrigerator
-- Noteworthy results
-	- Active vs. Reactive power does give additional clues
-	- Multi-phase loads make it easier
-	- Device specific characteristics
-		- e.g. Peak, constant, slow fall
-	- Overlapping of devices makes it hard to identify using only active power
-		- Three phase power system esp. in small households helps separate things
-			- Load is usually distributed evenly
-			- Heavy loads are usually isolated or multi-phase making it easier to detect smaller loads
-
-### [@privacyTradeoff]
-- Smart meter data is sensitive
-	- Tradeoff between privacy and data usability
-- Usage of data for customised real-time billing
-- Proposes (and verifies) mechanism to remove sensitive appliance data
-
-### [@listOfDevices1]
-- 15min sampling
-- In-circuit, metering method unspecified
-- Easily identifiable
-	- Refrigerator
-	- Kettle
-	- TV
-- Some devices are hard to disambiguate
-
-### [@combinedAnalysis]
-- Combined analysis with external data yields more info
-
-### [@healthCareUse]
-- Use in healthcare & elderly care
-- Habits identified by everyday routines
-	- Discovering routines allows recognition of anomalous activities
-	- May indicate people not being able to care for themselves anymore
-- Managed to identify habits and routines
-	- e.g. using computer while doing laundry
-
-### [@trendsInApplianceUse]
-- 5min sampling, 72 dwellings, 5 sites, 2 years
-- Identified trends in appliance use
-	- Increase in standby appliances
-	- Appliance category increase (low, high but few medium)
-- Understanding domestic energy usage
-
-### [@householdOfficeSimilar]
-- Households and offices are similar and may be treated the same way
-- TODO Gain access to the paper for more
-
-### [@circuitLevelMonitoring]
-- Advantages of monitoring circuit level
-	- No overshadowing of small devices
-	- Room based classification
-- Comparison against historical steady-state
-	- Temporal relation is of importance
-
-### [@slidingTimeWindow1]
-- Using temporal contextual information improves recognition by up to ~10%
-- Especially useful for devices that exhibit power spikes and specific patterns
-	- Refrigerator / AC
-	- Entertainment electronics
-
-### [@slidingTimeWindow2]
-- Two stage approach
-	- Categorising appliances by harmonics and power factor
-		- linear nonreactive
-		- linear reactive
-		- nonlinear reactive
-	- Identify individual appliances in categories
-- naive Bayes classifier
-- ~87% accuracy
-- Identifying devices turning on/off instead of their "presence"
-- Harmonics and temporal patterns play a large role
-	- Ref Kettle vs. Refrigerator harmonics and power factor ![image](https://www.mdpi.com/energies/energies-07-07041/article_deploy/html/images/energies-07-07041f6-1024.png)
-
-### [@moreNumbers]
-- ~23% error
-- kNN+Bayes
-
-### [@unsupervisedClustering]
-- Provides method for unsupervised clustering of appliance features
-- Verified with labelled data
-- Seems promising
-
-### [@algoComparison]
-- 20-30% depending on algo
-- Different features make for better results
-	- Transient state signatures (high sampling freq. req.)
-	- Steady state signatures
-		- Harmonics (FFT on current)
-		- Voltage-Current trajectory (2D mapping)
-		- Current waveform distortion
-		- Active vs. Reactive power variation
-	- Appliance types
-		- Binary (on/off)
-		- Multistate
-		- "Infinite"
+- Classifying data without prior manual training or knowledge [@unsupervisedClustering]
+  - Provides method for unsupervised clustering of appliance features
+  - Verified with labelled data
+  - Seems promising
 
 \pagebreak

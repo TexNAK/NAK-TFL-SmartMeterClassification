@@ -7,7 +7,8 @@ df = pd.read_csv('/Users/themegatb/Projects/Studies/TFL/NAK-TFL-SmartMeterClassi
 layout = go.Layout(
     autosize=True,
     width=1280,
-    height=720
+    height=720,
+    template="plotly_dark"
 )
 fig = go.Figure(layout=layout)
 

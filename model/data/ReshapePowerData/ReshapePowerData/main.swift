@@ -27,6 +27,10 @@ struct PhaseSample {
 func parse(sampleValue: String) -> Double? {
     var firstDotEncountered = false
     
+    guard sampleValue.allSatisfy({ $0.isNumber || $0 == "." }) else {
+        return nil
+    }
+    
     let cleanedValue = sampleValue.filter {
         let result = $0.isNumber || (!firstDotEncountered && $0 == ".")
         
@@ -39,6 +43,8 @@ func parse(sampleValue: String) -> Double? {
     
     return Double(cleanedValue)
 }
+
+var x = 0
 
 struct Sample {
     let timestamp: Date
@@ -85,6 +91,11 @@ struct Sample {
             
             guard let voltage = parse(sampleValue: rawValueMap[voltageKey]!), let load = parse(sampleValue: rawValueMap[loadKey]!) else {
                 print("Sample does not contain valid voltage/load value for phase \(i)")
+                return nil
+            }
+            
+            if load > 80 {
+                print("Sample contains unreasonably high loads for phase \(i)")
                 return nil
             }
             
