@@ -1,90 +1,37 @@
 # Existing research
 
-- How to measure electricity
-  - Household layout (three phases)
-  - Measuring equipment
-    - Intrusive load monitoring (in-circuit) e.g. household energy meters
-    - Non-intrusive load meters e.g. clamp on or gloves [@monitoringGlove]
-      - Allows three phase monitoring, accurate to .2A
-      - Allows to monitor building power consumption by access to electricity room (shared in case of apartments) or potentially sewers
-  - Sampling
-    - Circuit level vs. house level [@circuitLevelMonitoring]
-      - Former has advantages like less overshadowing of small devices and potentially room-based classification
-    - Device specific features that can improve results by 20-30% [@algoComparison]
-      - Transient state signatures (high sampling freq. req.)
-      - Steady state signatures
-        - Harmonics (FFT on current)
-        - Voltage-Current trajectory (2D map)
-        - Waveform distortion
-        - Active vs. reactive power variation can improve results [@algoComparison] [@inexpensiveClassification]
-      - Appliance types
-        - Binary
-        - Multistate
-        - "Infinite" states
+In a common household there are three phases, where each one serves different appliances which are usually located in different areas. This is done to distribute the load. In the context of monitoring appliances it provides a means of isolation and reduces the amount of over-shadowing where one appliance mixes and masks the profile of another. While it is easiest to monitor power consumption on the three phases, results can be improved further by monitoring each circuit individually. Much like the three phases it further reduces over-shadowing and might even allow room-based classification, depending on the available knowledge about the household. [@circuitLevelMonitoring]
 
-- How to identify appliance type and state
-  - Generally discerning devices and device states through current [@applianceStateMonitoringMLCoffeeRefrigerator]
-    - Single-Phase appliances state identified by ML algorithm
-    - Coffee machine making coffee
-    - Refrigerator running compressor
-  - Use temporal contextual information
-    - Harmonics and temporal patterns play a large role [@slidingTimeWindow2] [@circuitLevelMonitoring]
-      - Ref Kettle vs. Refrigerator harmonics and power factor ![image](https://www.mdpi.com/energies/energies-07-07041/article_deploy/html/images/energies-07-07041f6-1024.png)
-    - +10% recognition [@slidingTimeWindow1]
-      - Especially useful for devices that exhibit power spikes and specific patterns
-        - Refrigerator / AC
-        - Entertainment electronics
-    - Two stage approach, identify by using their state transitions instead of current state [@slidingTimeWindow2]
-      - Categorise based on harmonics & power factor (linear nonreactive, linear reactive, nonlinear reactive)
-      - Identify individual appliances in categories
-      - Implementation: Naive Bayes classifier => ~87% accuracy
+Measuring equipment can be installed in two possible ways. The most precise method is in-circuit measurement where the meter is placed in between the incoming supply and the household. This requires knowledge in electronics and is usually complicated to install compared to the second method. An alternative is to use clamp-on meters which can be wrapped around existing cables. This technology can for example be incorporated into a glove making it easy to use for non-experts. However, it usually lacks the precision of the former method with maximum accuracy hovering around 0.2A which resolves to about ±50W in Europe. [@monitoringGlove]
 
-- Results
-  - 97% scenarios, 98.3% on/off events [@inexpensiveClassification]
-    - Stove burners
-    - Electric kettle (verified by [@listOfDevices1])
-    - Oven
-    - Toaster
-    - Range hood fan (stove fan thingy)
-    - Coffee maker
-    - Microwave
-    - Hair dryer (two modes)
-    - Blender
-    - Mixer
-    - Stereo
-    - Refrigerator (verified by [@listOfDevices1])
-    - Undetectable/-discernable
-      - Lights
-      - PC
-      - TV (recognized by [@listOfDevices1])
-      - Didn't use power factor or harmonics
-      - Some devices are hard to discern without detailed knowledge [@listOfDevices1]
-  - ~87% accuracy (bayes + temporal two stage) [@slidingTimeWindow2]
-  - ~77% accuracy (kNN + bayes) [@moreNumbers]
+Electricity is defined not only through instantaneous usage in watts. There is a multitude of other metrics which can be collected to improve the accuracy of appliance classification algorithms by up to 30%. These include the exact shape of transient states when an appliance is turned on or off (although this requires a very high sampling frequency). However, even in the steady state of an appliance different metrics are available. A fast-fourier transform on the current wave returns the harmonics, plotting the voltage and current trajectory of the wave gives a trajectory which is usually unique to appliances, distortions of the waveform introduced during operation are also indicative of specific devices, and finally the ratio of active and reactive power use can help discerning devices which are otherwise similar. Additionally, different appliances have different states. For example a light is binary with only an on and off state, while a coffee machine might have three possible states (off, warming up, brewing coffee). Some appliances like for example computers have a nearly infinite amount of states which usually transition smoothly. [@inexpensiveClassification] [@algoComparison]
 
-- Using the data
-  - Combining it with external data can yield further insights [@combinedAnalysis]
-  - What can be read from it?
-    - Discovering large scale trends [@trendsInApplianceUse]
-      - 5min sampling, 72 dwellings, 5 sites, 2 years
-      - Identified trends in appliance use
-        - Increase in standby appliances
-        - Appliance category increase (low, high but few medium)
-      - Understanding domestic energy usage
-    - Habits tracking [@healthCareUse]
-      - Managed to identify habits and routines (e.g. using computer while doing laundry)
-      - Health/Elderly care use
-        - Discovering routines allows recognition of anomalous activities
-        - May indicate people not being able to care for themselves anymore
-  - Transferring results to offices [@householdOfficeSimilar]
-  - Smart meter data is sensitive [@privacyTradeoff]
-    - Legitimate interest: Could be used for real-time billing based on e.g. grid-load
-    - When sharing it, it is a tradeoff between privacy and data usability
-    - Some algorithms exist which may be able to obfuscate data but keep it usable
+In order to identify consumers, various different methods have been researched. One paper created an isolated lab environment which resembles a small apartement. They installed a current meter on the incoming supply line which measures both active and reactive instantaneous power usage. Using a simple clustering algorithm, they managed to discern a wide range of devices (Stove burners, Electric kettle, Oven, Toaster, Range hood fan, Coffee maker, Microwave, Hair dryer with two modes, Blender, Mixer, Stereo, Refrigerator) with 98.3% accuracy. Additionally, scenario recognition has been successful as well, detecting specific daily routines with a 97% accuracy. However, using just instantaneous current as the underlying data, they were not able to clearly differentiate lights, entertainment systems and personal computers. [@inexpensiveClassification]
 
-- Classifying data without prior manual training or knowledge [@unsupervisedClustering]
-  - Provides method for unsupervised clustering of appliance features
-  - Verified with labelled data
-  - Seems promising
+A different research paper used a similar methodology and also managed to identify an electric kettle and refrigerator with high confidence. Additionally, they were able to discern the Television from other devices on the grid. However, like the first paper, they also recognized that using just current data some devices can not be discerned without further knowledge of the household or more input data. They suggested that analysing the harmonics in addition to current amplitude could resolve this issue for most appliances. [@listOfDevices1]
+
+Another team of researchers attempted classification based on current using machine learning algorithms. They succeeded in not only identifying the devices used (coffee machine and refrigerator) but also in which state they were. This allows to for example detect the type of coffee that is being brewed or when a refrigerator has been opened. [@applianceStateMonitoringMLCoffeeRefrigerator]
+
+These results can be improved further by using temporal contextual information gained by collecting and storing samples over longer periods of time. This can increase the accuracy by up to 10% and is especially useful for identifying devices which exhibit short power spikes and specific temporal patterns, which is often the case with entertainment electronics and refrigerators among others. [@slidingTimeWindow1]
+
+Additionally, factoring in the current draw harmonics can yield even better results. The first row of [@fig:current] shows the current harmonics, the second the overall current draw, and the third the change in load. It becomes evident that especially the latter gives valuable insight in the type of device when just looking at the current. However, the harmonics in the first row are also of interest. While in this example only the amplitude changes, [@fig:harmonics] shows various harmonics of other appliances. Especially the microwave oven and blender have very distorted waveforms which are unique. [@slidingTimeWindow2] [@circuitLevelMonitoring]
+
+![Kettle & Refrigerator harmonics [@slidingTimeWindow2]](src/images/energies-07-07041f6-1024.png){ width=50% #fig:current}
+
+![Various power harmonics [@slidingTimeWindow2]](src/images/energies-07-07041f2-1024.png){ width=50% #fig:harmonics}
+
+Building on this knowledge, a two stage approach can be used. First, devices are categorised based on their current draw, state transitions and temporal contextual information. In their research paper, Meehan et al. grouped appliances into three categories: "linear nonreactive", "linear reactive", and "nonlinear reactive". They then identified individual appliances within each category using the characteristics during the state transition. Using a Naive Bayes classifier an accuracy of ~87% was achieved. [@slidingTimeWindow2]
+
+Other research papers combined the bayes classifier with a k-nearest neighbor algorithm and achieved roughly 77% confidence [@moreNumbers]. However, all classifiers mentioned so far require manual labelling and training which is mostly unviable for analysing individual households as each may contain different appliances from different vendors with different power signatures. For this reason, unsupervised clustering of appliances is an active field of research and some promising solutions have been developed so far [@unsupervisedClustering].
+
+Now that the appliances have been classified, the data can be put to use. By combining it with other external data source about a household even more insights can be gained [@combinedAnalysis].
+
+A study which observed five sites with a total of 72 dwellings over a time period of two years. They captured current samples every five minutes. Using the data, they discovered trends in appliance use and noticed an increase in standby appliances per household as well as an increase in both very low power and high power devices. Few households bought new devices that fall into the medium range. Using such data, general domestic trends can be generated which provide valuable insights for electricity providers, governments and other parties. [@trendsInApplianceUse]
+
+Another potential use of the collected data is in healthcare. As habits and daily routines can be derived from appliance use, deviations from the usual habits can be detected easily. Especially in elderly care this can be employed to identify households where the inhabitants are no longer able to care for themselves. Existing research indicates that it is possible to recognize patterns in appliance use like for example using a computer while having lunch with high accuracy. [@healthCareUse]
+
+While households and office spaces are generally different in both layout, size, and appliance use it is expected that most research is transferrable [@householdOfficeSimilar].
+
+Especially in a corporate and industrial context it may be interesting for electricity providers to use such information for personalised billing. However, sharing power usage data always remains a tradeoff between privacy and gain as this data is highly sensitive. For this reason an effort has been made to modify the samples returned from a meter so that they do not reveal any sensitive information while still being valuable for e.g. providers. [@privacyTradeoff]
 
 \pagebreak

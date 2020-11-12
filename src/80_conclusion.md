@@ -12,4 +12,14 @@ Nothing here yet!
   - Some results might be transferable (needs check)
   - Potential to directly give insight into company
 
+-- OTHER
+
+- Allows to monitor building power consumption by access to electricity room (shared in case of apartments) or potentially sewers
+
+- TODO Add source codes
+  - ESP32
+  - home-master
+  - Swift (*done*)
+  - Python (*done*)
+
 \pagebreak
