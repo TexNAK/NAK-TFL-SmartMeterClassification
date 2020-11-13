@@ -33,5 +33,3 @@ Another potential use of the collected data is in healthcare. As habits and dail
 While households and office spaces are generally different in both layout, size, and appliance use it is expected that most research is transferrable [@householdOfficeSimilar].
 
 Especially in a corporate and industrial context it may be interesting for electricity providers to use such information for personalised billing. However, sharing power usage data always remains a tradeoff between privacy and gain as this data is highly sensitive. For this reason an effort has been made to modify the samples returned from a meter so that they do not reveal any sensitive information while still being valuable for e.g. providers. [@privacyTradeoff]
-
-\pagebreak

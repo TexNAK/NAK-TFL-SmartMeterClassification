@@ -27,3 +27,5 @@ To identify individual appliances, the graph will be searched for distinct power
 ## Analysis
 
 This section contains four different distinct power signatures which have been captured. Note that some of the verification signatures do contain a few invalid samples which passed the syntax and plausability analysis. As the interface was in operation for a prolonged time period, more and more invalid samples accumulated. It is unclear how exactly this happened but a memory leak in the MCU or a deteriorating physical connection / increasing misalignment of the interface are strong suspects.
+
+The figures referenced in the following sections show the time on the x-axis and power consumption in Amps on the y-axis. In some diagrams there is all three phases while others only contain individual ones if the others are not relevant.

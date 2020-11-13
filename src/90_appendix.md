@@ -13,9 +13,7 @@
 \addcontentsline{toc}{section}{Appendix}
 \renewcommand{\thesubsection}{\Alph{subsection}}
 
-## Data samples
-
-### Example data returned by interface {#sec:example-data}
+## Example data returned by interface {#sec:example-data}
 
 ```bash
 # HELP power_current_usage_kW Power consumption of the household

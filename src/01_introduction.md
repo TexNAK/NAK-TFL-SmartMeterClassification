@@ -21,6 +21,7 @@
       - "sections"
 
     lof: true
+    linestretch: 1.25
 ---
 
 # Introduction

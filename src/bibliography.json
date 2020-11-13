@@ -532,5 +532,50 @@
     "title": "Evaluation of classification methodologies and Features selection from smart meter data",
     "type": "article-journal",
     "volume": "142"
-  }
+  },
+  {
+    "author": [
+      {
+        "family": "Fattal",
+        "given": "Jade"
+      },
+      {
+        "family": "Karami",
+        "given": "Paul Bou Dib Nabil"
+      }
+    ],
+    "container-title": "2015 third international conference on technological advances in electrical, electronics and computer engineering (taeece)",
+    "id": "lipo-charging-current1",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "page": "33-38",
+    "publisher": "IEEE",
+    "title": "Review on different charging techniques of a lithium polymer battery",
+    "type": "paper-conference"
+  },
+  {
+    "author": [
+      {
+        "family": "Dearborn",
+        "given": "Scott"
+      }
+    ],
+    "container-title": "Microchip Technology Inc",
+    "id": "lipo-charging-current2",
+    "issued": {
+      "date-parts": [
+        [
+          2004
+        ]
+      ]
+    },
+    "title": "Power management in portable applications: Charging lithium-ion/lithium-polymer batteries",
+    "title-short": "Power management in portable applications",
+    "type": "article-journal"
+  }  
 ]
