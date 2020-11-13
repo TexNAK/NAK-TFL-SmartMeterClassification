@@ -43,3 +43,39 @@ power_usage_total_kWh{tarif="2"} 213.8
 power_usage_total_kWh{tarif="3"} 74.0
 power_usage_total_kWh{tarif="4"} 145.9
 ```
+
+## Source code
+
+### HTTP recorder
+
+```bash
+#!/bin/sh
+while sleep 95; do
+    echo `date +"%s %d-%m-%y %H:%M:%S"`
+    echo `date +"%s %d-%m-%y %H:%M:%S"` >> out.txt
+    curl 10.0.0.37/metrics \
+        --retry 10 \
+        --retry-delay 10 \
+        --retry-connrefused >> out.txt
+    echo "------" >> out.txt
+done
+```
+
+### Python graphing tool
+
+```python
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
+df = pd.read_csv('data/processed/combined.csv', sep=';')
+
+layout = go.Layout(autosize=True, width=1280, height=720)
+fig = go.Figure(layout=layout)
+
+fig.add_trace(go.Scatter(x=df['time'], y=df['load L1'], name="Load (L1)"))
+fig.add_trace(go.Scatter(x=df['time'], y=df['load L2'], name="Load (L2)"))
+fig.add_trace(go.Scatter(x=df['time'], y=df['load L3'], name="Load (L3)"))
+
+fig.show()
+```

@@ -1,25 +1,9 @@
 # Conclusion
 
-Nothing here yet!
+In this research paper, a number of methods for recognizing various appliances have been analyzed. It has been shown that some appliances like for example refrigerators or water heaters are clearly discernable using only the current as input. However, it also became clear that other appliances like entertainment and computers are harder to discern and require more specialised equipment. A low-cost method of interacting with common household electricity meters has been presented and used to capture data about the authors household. With this data it was possible to identify some appliances using no prior inside knowledge.
 
-- Shoving data into the cloud poses security risk not only for individuals
-- Todays state
-  - Technology is capable
-  - Electricity providers are accessing the data but not sharing it in real time yet
-    - Up to 100 samples for a total of 32 time slots can be stored in examined hardware
-- Company power profile
-  - Not directly analysed
-  - Some results might be transferable (needs check)
-  - Potential to directly give insight into company
+A number of different use cases ranging from trend analysis, individualized billing, grid optimizations and cost saving measures all the way to healthcare applications and habit tracking which could potentially safe lives of elderly inhabitants. However, it also became clear that this kind of data poses a major security hazard if it were to become public or evil spirited people gained access to it. With todays technology it is possible to capture, read, and parse electricity data and, to a certain degree, this is done by electricity providers today for individualized billing. Currently, this data is not shared in real-time and it remains to be seen if this would be a good route to take. To decrease the impact on privacy, research is being undertaken to develop algorithms which obfuscate the data just enough so that they are not giving insights into personal lifes while still being rich enough to be useful.
 
--- OTHER
-
-- Allows to monitor building power consumption by access to electricity room (shared in case of apartments) or potentially sewers
-
-- TODO Add source codes
-  - ESP32
-  - home-master
-  - Swift (*done*)
-  - Python (*done*)
+While this analysis has been focused around private households, some research suggests that the results are transferable to office spaces as well. While this topic has not been covered in-depth, it remains a possibility. This allows companies to make use of all the advantages but also pay for the disadvantages that come with recording and sharing this type of data. Especially in shared households and office spaces where the electricity meters are not located within the apartement, special caution should to be taken in order to preserve the privacy of all inhabitants and employees.
 
 \pagebreak

@@ -577,5 +577,34 @@
     "title": "Power management in portable applications: Charging lithium-ion/lithium-polymer batteries",
     "title-short": "Power management in portable applications",
     "type": "article-journal"
-  }  
+  },
+  {
+    "author": [
+      {
+        "family": "Isaak",
+        "given": "Jim"
+      },
+      {
+        "family": "Hanna",
+        "given": "Mina J"
+      }
+    ],
+    "container-title": "Computer",
+    "id": "elections",
+    "issue": "8",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "page": "56-59",
+    "publisher": "IEEE",
+    "title": "User data privacy: Facebook, cambridge analytica, and privacy protection",
+    "title-short": "User data privacy",
+    "type": "article-journal",
+    "volume": "51"
+  }
+  
 ]
