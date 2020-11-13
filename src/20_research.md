@@ -18,9 +18,9 @@ Additionally, factoring in the current draw harmonics can yield even better resu
 
 ![Kettle & Refrigerator harmonics [@slidingTimeWindow2]](src/images/energies-07-07041f6-1024.png){ width=50% #fig:current}
 
-![Various power harmonics [@slidingTimeWindow2]](src/images/energies-07-07041f2-1024.png){ width=50% #fig:harmonics}
-
 Building on this knowledge, a two stage approach can be used. First, devices are categorised based on their current draw, state transitions and temporal contextual information. In their research paper, Meehan et al. grouped appliances into three categories: "linear nonreactive", "linear reactive", and "nonlinear reactive". They then identified individual appliances within each category using the characteristics during the state transition. Using a Naive Bayes classifier an accuracy of ~87% was achieved. [@slidingTimeWindow2]
+
+![Various power harmonics [@slidingTimeWindow2]](src/images/energies-07-07041f2-1024.png){ width=50% #fig:harmonics}
 
 Other research papers combined the Bayes classifier with a k-nearest neighbor algorithm and achieved roughly 77% confidence [@moreNumbers]. However, all classifiers mentioned so far require manual labelling and training which is mostly unviable for analysing individual households as each may contain different appliances from different vendors with different power signatures. For this reason, unsupervised clustering of appliances is an active field of research and some promising solutions have been developed so far [@unsupervisedClustering].
 
