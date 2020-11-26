@@ -1,4 +1,5 @@
-# Scientific paper template
+# Smart Meter Classification
 
-This is an example README.md for your next scientific paper! The templated evolved out of the need to write TFLs at the Nordakademie but not wanting to fight with LaTeX all day. So enjoy. Documentation can be found [here](https://texnak.github.io/Science-Paper-Template-Documentation/).
+[![DOI](https://zenodo.org/badge/305984012.svg)](https://zenodo.org/badge/latestdoi/305984012)
 
+Evaluation of different methods for identifying appliance use within a household using electricy usage data.
